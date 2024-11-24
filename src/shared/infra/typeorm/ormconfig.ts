@@ -20,7 +20,7 @@ export const AppDataSource = new DataSource({
     Product,
   ],
   synchronize: true,
-  ssl: true,
+  ssl: process.env.NODE_ENV === "production",
 });
 
 AppDataSource.initialize()

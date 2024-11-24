@@ -7,7 +7,7 @@ export class Product extends PrimaryEntity {
   @Column({ name: "name" })
   name: string;
 
-  @Column({ name: "price" })
+  @Column({ name: "price", type: "numeric" })
   price: number;
 
   @Column({ name: "quantity" })
