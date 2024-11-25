@@ -10,7 +10,7 @@ export class ProductImage extends PrimaryEntity {
   @Column({ name: "product_id" })
   product_id: string;
 
-  @OneToOne(() => Product, product => product.image)
+  @OneToOne(() => Product, product => product.image, { onDelete: "CASCADE" })
   @JoinColumn({ name: "product_id" })
   product: Product;
 }
